@@ -1,0 +1,29 @@
+{
+  "name": "driftwoood",
+  "author": {
+    "name": "Bill Bergin"
+  },
+  "scripts": {
+    "watch": "webpack -w --colors --progress --profile --config webpack.config.js",
+    "start": "webpack-dev-server",
+	"build": "webpack --colors --progress --profile --config webpack.config.js"
+  },
+  "version": "1.0.0",
+  "keywords": [],
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.1",
+    "eslint": "^3.19.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "directories": {},
+  "dependencies": {}
+}
