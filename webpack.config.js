@@ -4,6 +4,8 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+
 
 // the path(s) that should be cleaned
 let pathsToClean = [
@@ -71,6 +73,14 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(pathsToClean),
     new ExtractTextPlugin('../css/style.css'),
+    new UglifyJSPlugin(
+        {
+          output: {
+          comments: false,
+          beautify: false,
+          }
+        }
+    ),
 /*
     new CopyWebpackPlugin([
       {from: './src/*.html', to: path.resolve(__dirname, 'build'), flatten: true},

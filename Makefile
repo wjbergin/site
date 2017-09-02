@@ -87,9 +87,11 @@ endif
 
 devserver:
 ifdef PORT
-	$(BASEDIR)/develop_server.sh restart $(PORT)
+	$(BASEDIR)/develop_server.sh restart $(PORT) &
+	yarn run watch &
 else
-	$(BASEDIR)/develop_server.sh restart
+	$(BASEDIR)/develop_server.sh restart &
+	yarn run watch &
 endif
 
 stopserver:

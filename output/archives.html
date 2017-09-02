@@ -6,14 +6,12 @@
 
     <title>billbergin.com</title>
 
-    <link rel="stylesheet" href="http://billbergin.com/theme/css/style.css" />
-    <link rel="stylesheet" href="http://billbergin.com/theme/css/pygments.css" />	
+    <link rel="stylesheet" href="./theme/css/style.css" />
+    <link rel="stylesheet" href="./theme/css/pygments.css" />	
 
     <!-- So Firefox can bookmark->"abo this site" -->
-        <link href="feeds/all.atom.xml" rel="alternate" title="billbergin.com" type="application/atom+xml">
 
 </head>
-
 <body>
 
 <!-- Nav Bar -->
@@ -21,7 +19,7 @@
 <div class="top-bar">
 <div class="row">
     <div class="large-9 large-centered columns">
-	    <h1><a href="http://billbergin.com">billbergin.com</a></h1>
+	    <h1><a href=".">billbergin.com</a></h1>
     </div>
 </div>
 </div>
@@ -48,6 +46,10 @@
 
 <table class="table-archive">
     <tbody>
+        <tr>
+        <td>Fri 03 December 2010</td>
+        <td><a href='my-super-post.html'>My super&nbsp;title</a></td>
+        </tr>
     </tbody>
 </table>
 
@@ -58,21 +60,19 @@
     <aside class="large-3 columns">
         <h5 class="sidebar-title">Site</h5>
         <ul class="side-nav">
-            <li><a href="http://billbergin.com/archives.html">Archives</a>
-            <li><a href="http://billbergin.com/tags.html">Tags</a>
+            <li><a href="./archives.html">Archives</a>
+            <li><a href="./tags.html">Tags</a>
 
 
-                <li><a href="http://billbergin.com/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
         </ul>
 
-
-        <h5 class="sidebar-title">Links</h5>
+		
+        <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
-            <li><a href="http://getpelican.com/">Pelican</a></li>
-            <li><a href="http://python.org/">Python.org</a></li>
-            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-            <li><a href="#">You can modify those links in your config file</a></li>
+            <li><a href="./category/python.html">Python</a></li>
+   
         </ul>
+
 		
         <h5 class="sidebar-title">Social</h5>
         <ul class="side-nav">
@@ -85,15 +85,20 @@
 </div> <!-- End Main Content and Sidebar -->
 
 
-<!-- Footer -->
-<footer class="row">
-    <div class="large-12 columns">
-        <hr />
-        <div class="row">
-            <div class="large-6 columns">
-                <p>billbergin.com by Bill</p>
-            </div>
-            </div>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer class="row">
+        <div class="large-12 columns">
+            <hr />
+            <div class="row">
+                <div class="large-6 columns">
+                    <p>billbergin.com by Bill</p>
+                </div>
+                </div>
+        </div>
+    </footer>
+
+<script src="./theme/js/vendor.js"></script>
+<script src="./theme/js/common.js"></script>
+<script src="./theme/js/index.js"></script>
 </body>
+</html>

@@ -1,29 +1,5 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8" />
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width" />
-
-    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" />
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" />	
-
-    <!-- So Firefox can bookmark->"abo this site" -->
-    {% if FEED_ALL_ATOM %}
-        <link href="{{ FEED_ALL_ATOM }}" rel="alternate" title="{{ SITENAME }}" type="application/atom+xml">
-    {% endif %}
-    {% if FEED_ATOM %}
-        <link href="{{ FEED_ATOM }}" rel="alternate" title="{{ SITENAME }}" type="application/atom+xml">
-    {% endif %}
-    {% if FEED_RSS %}
-        <link href="{{ FEED_RSS }}" rel="alternate" title="{{ SITENAME }}" type="application/rss+xml">
-    {% endif %}
-    {% if FEED_ALL_RSS %}
-        <link href="{{ FEED_ALL_RSS }}" rel="alternate" title="{{ SITENAME }}" type="application/rss+xml">
-    {% endif %}
-
-</head>
+{% include 'head.html' %}
 
 <body>
 
@@ -133,7 +109,7 @@
     {% include "analytics.html" %}
     </footer>
 
-    <script src="{{ SITEURL }}/theme/js/vendors.js"></script>
-    <script src="{{ SITEURL }}/theme/js/commons.js"></script>
-    <script src="{{ SITEURL }}/theme/js/index.js"></script>
+    {% include "scripts.html" %}
+
 </body>
+</html>
