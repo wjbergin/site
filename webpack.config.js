@@ -2,6 +2,14 @@
 const webpack = require('webpack');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+// the path(s) that should be cleaned
+let pathsToClean = [
+  './themes/driftwood/static/js',
+  './themes/driftwood/static/css',
+];
 
 const babelOptions = {
   "presets": "env"
@@ -35,20 +43,14 @@ module.exports = {
         }
       ]
     },
-    {
-      test: /\.scss$/,
-      use: [
-        {
-          loader: 'style-loader',
-        },
-        {
-          loader: 'css-loader',
-        },
-        {
-          loader: 'sass-loader',
-        }
-      ]
-    }]
+   {
+    test: /\.scss$/,
+	use: ExtractTextPlugin.extract({
+	  fallback: 'style-loader',
+	  //resolve-url-loader may be chained before sass-loader if necessary
+	  use: ['css-loader', 'sass-loader']
+	})
+   }]
   },
   watchOptions: {
     ignored: /node_modules/,
@@ -67,6 +69,8 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   plugins: [
+    new CleanWebpackPlugin(pathsToClean),
+    new ExtractTextPlugin('../css/style.css'),
 /*
     new CopyWebpackPlugin([
       {from: './src/*.html', to: path.resolve(__dirname, 'build'), flatten: true},

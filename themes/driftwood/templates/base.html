@@ -120,16 +120,20 @@
 </div> <!-- End Main Content and Sidebar -->
 
 
-<!-- Footer -->
-<footer class="row">
-    <div class="large-12 columns">
-        <hr />
-        <div class="row">
-            <div class="large-6 columns">
-                <p>{{ SITENAME }} by {{ AUTHOR }}</p>
-            </div>
-            </div>
-    </div>
-{% include "analytics.html" %}
-</footer>
+    <!-- Footer -->
+    <footer class="row">
+        <div class="large-12 columns">
+            <hr />
+            <div class="row">
+                <div class="large-6 columns">
+                    <p>{{ SITENAME }} by {{ AUTHOR }}</p>
+                </div>
+                </div>
+        </div>
+    {% include "analytics.html" %}
+    </footer>
+
+    <script src="{{ SITEURL }}/theme/js/vendors.js"></script>
+    <script src="{{ SITEURL }}/theme/js/commons.js"></script>
+    <script src="{{ SITEURL }}/theme/js/index.js"></script>
 </body>
