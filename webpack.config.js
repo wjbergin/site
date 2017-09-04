@@ -22,7 +22,8 @@ function isVendor(module) {
 }
 
 const entries = {
-  index: './themes/driftwood/src/js/index.js'
+  index: './themes/driftwood/src/js/index.js',
+  home: './themes/driftwood/src/js/home.js'
 };
 
 module.exports = {
@@ -57,15 +58,6 @@ module.exports = {
   watchOptions: {
     ignored: /node_modules/,
     aggregateTimeout: 300,
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'build'),
-    overlay: true,
-    port: 9000,
-    compress: true,
-    hot: true,
-    clientLogLevel: 'info',
-    stats: 'errors-only',
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
