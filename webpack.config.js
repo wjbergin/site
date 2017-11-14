@@ -23,7 +23,7 @@ function isVendor(module) {
 
 const entries = {
   index: './themes/driftwood/src/js/index.js',
-  home: './themes/driftwood/src/js/home.js'
+  // home: './themes/driftwood/src/js/home.js'
 };
 
 module.exports = {
