@@ -1845,6 +1845,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
+"gridlex@https://github.com/devlint/gridlex/archive/2.5.0.tar.gz":
+  version "2.5.0"
+  resolved "https://github.com/devlint/gridlex/archive/2.5.0.tar.gz#9b8cf82ab707b7aa447f4a3d8e596a858d5febba"
+
 har-schema@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/har-schema/-/har-schema-1.0.5.tgz#d263135f43307c02c602afc8fe95970c0151369e"
@@ -2217,6 +2221,10 @@ isobject@^3.0.1:
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+
+jeet@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/jeet/-/jeet-7.2.0.tgz#2aa562a2dc1d74cc99527113f16a821e974e30ee"
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.1.9"
