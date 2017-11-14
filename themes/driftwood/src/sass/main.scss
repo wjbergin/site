@@ -1,2 +1,51 @@
 @import 'reset';
+$gl-gutter: 2rem;
+$gl-gutter-vertical: 2rem;
+@import '../../../../node_modules/gridlex/src/gridlex.scss';
 @import 'variables';
+@import 'article';
+@import 'aside';
+@import 'footer';
+
+
+html{
+  height: 100%;
+  font-size: 62.5%;
+  font-family: $font;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header{
+   /* We want the header to have a static height, 
+   it will always take up just as much space as it needs.  */
+   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 0 0 auto;
+   height: 100px;
+}
+
+.page-content{
+   /* By setting flex-grow to 1, the main content will take up 
+   all of the remaining space on the page. 
+   The other elements have flex-grow: 0 and won't contest the free space. */
+   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 1 0 auto;
+}
+
+footer{
+   /* Like the header, the footer will have a static height - it shouldn't grow or shrink.  */
+   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+   flex: 0 0 auto;
+   min-height: 50px;
+   color: #FFF;
+   padding: 1.5rem 0;
+}
