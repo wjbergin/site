@@ -19,6 +19,7 @@
     "css-loader": "^0.28.1",
     "eslint": "^3.19.0",
     "extract-text-webpack-plugin": "^3.0.0",
+    "gridlex": "https://github.com/devlint/gridlex/archive/2.5.0.tar.gz",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
